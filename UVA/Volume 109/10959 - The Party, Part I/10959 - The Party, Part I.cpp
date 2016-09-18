@@ -38,7 +38,6 @@ void bfs(int start){
 
 
 int main(){
-    //freopen("input.txt","r",stdin);
     int T,i,x,y,v,e;
     scanf("%d",&T);
     while(T--){
