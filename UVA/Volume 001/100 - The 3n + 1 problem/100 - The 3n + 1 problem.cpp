@@ -2,6 +2,8 @@
 using namespace std;
 
 int main(){
+    //freopen("input.txt","r",stdin);
+    //freopen("output.txt","w",stdout);
     long  a,b,count,m,i,j,temp,temp_i,temp_j;
     while(cin>>a>>b){
         temp_i=a;
