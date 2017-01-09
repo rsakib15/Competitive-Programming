@@ -23,8 +23,6 @@ int main(){
                 st.push(s[i]);
             else if(s[i]=='}' && !st.empty() && st.top()=='{')
                 st.pop();
-            else if(s[i]=='}' && !st.empty() && st.top()=='{')
-                st.pop();
             else
                 f=1;
         }
