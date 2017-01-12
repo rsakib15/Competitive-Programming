@@ -47,7 +47,7 @@ int PRIMS(int src,int dest){
 }
 
 int main(){
-    freopen("input.txt","r",stdin);
+    //freopen("input.txt","r",stdin);
     int k=0,c=0;
     string s1,s2;
     while(cin>>node>>edge){
