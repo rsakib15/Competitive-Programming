@@ -1,0 +1,66 @@
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+#include <cstdlib>
+
+using namespace std;
+int digit_sum(int n);
+int input(char name1[],int len){
+    int j,sum1=0;
+    for(j=0;j<len;j++){
+            if(name1[j]>='a' && name1[j]<='z')
+                sum1+=(name1[j]-96);
+            else if(name1[j]>='A' && name1[j]<='Z')
+                sum1+=(name1[j]-64);
+
+        }
+
+        return sum1;
+
+}
+int main(){
+
+    char name1[25],name2[25];
+    int len1,len2,sum1,sum2,rem1,rem2;
+
+    while(gets(name1),gets(name2)){
+
+        sum1=0;
+        sum2=0;
+
+        len1=strlen(name1);
+        len2=strlen(name2);
+
+        sum1=input(name1,len1);
+        sum2=input(name2,len2);
+
+        rem1=digit_sum(sum1);
+        rem2=digit_sum(sum2);
+
+        double r;
+        if(rem1>rem2)
+            r=(double)rem2/(double)rem1;
+        else
+            r=(double)rem1/(double)rem2;
+
+        r=r*100;
+
+        printf("%.2lf %%\n",r);
+
+
+
+    }
+
+}
+
+int digit_sum(int num){
+    int sum = 0;
+    while (num > 0){
+        sum += num % 10;
+        num /= 10;
+    }
+    if (sum > 9){
+        sum = digit_sum(sum);
+    }
+        return sum;
+}

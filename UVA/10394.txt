@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+#define SIZE 20000010
+using namespace std;
+
+bool status[20000010];
+int twin[20000010];
+
+int sieve() {
+	for(int i=0;i<=SIZE;i++)
+        status[i]=1;
+
+	for(int i=2;i<=SIZE;i++) {
+        if(status[i]==1) {
+            for(int j=2*i;j<=SIZE;j+=i)
+                status[j]=0;
+        }
+    }
+
+    int j=0;
+
+    for(int i=2;i<=SIZE;i++) {
+        if(status[i]==1 && status[i+2]==1){
+            twin[j++]=i;
+            twin[j++]=i+2;
+        }
+    }
+
+}
+
+
+int main(){
+    sieve();
+    long long inp;
+    while(cin>>inp){
+        cout<<"("<<twin[2*(inp-1)]<<", "<<twin[2*(inp-1)+1]<<")"<<endl;
+    }
+
+}

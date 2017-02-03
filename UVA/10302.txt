@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+int main()
+{
+       long long x,sum;
+       while(cin>>x){
+            sum=(x*x*(x+1)*(x+1))/4;
+            printf("%lld\n",sum);
+       }
+        return 0;
+}

@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cstring>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    char S[14];
+    int l=0;
+
+    while(cin>>S){
+        l++;
+        if(strcmp(S,"#")==0)
+            break;
+        if(strcmp(S,"HELLO")==0)
+            cout<<"Case "<<l<<": "<<"ENGLISH"<<endl;
+        else if(strcmp(S,"HOLA")==0)
+            cout<<"Case "<<l<<": "<<"SPANISH"<<endl;
+        else if(strcmp(S,"HALLO")==0)
+            cout<<"Case "<<l<<": "<<"GERMAN"<<endl;
+        else if(strcmp(S,"BONJOUR")==0)
+            cout<<"Case "<<l<<": "<<"FRENCH"<<endl;
+        else if(strcmp(S,"CIAO")==0)
+            cout<<"Case "<<l<<": "<<"ITALIAN"<<endl;
+        else if(strcmp(S,"ZDRAVSTVUJTE")==0)
+            cout<<"Case "<<l<<": "<<"RUSSIAN"<<endl;
+        else
+            cout<<"Case "<<l<<": "<<"UNKNOWN"<<endl;
+
+    }
+    
+    return 0;
+}
+
+
+
+

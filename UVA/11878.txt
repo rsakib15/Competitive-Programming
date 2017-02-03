@@ -1,0 +1,24 @@
+#include<cstdio>
+#include<cstring>
+#include<cstdlib>
+
+using namespace std;
+int main(){
+    int a,b,count=0,n=100;
+    char c,d[1000];
+
+    while(n){
+        scanf("%d%c%d=%s",&a,&c,&b,d);
+        if(c=='+'){
+            if(a+b==atoi(d))
+                count++;
+        }
+        else if(c=='-'){
+             if(a-b==atoi(d))
+                count++;
+        }
+        n--;
+    }
+        printf("%d\n",count);
+        return 0;
+}

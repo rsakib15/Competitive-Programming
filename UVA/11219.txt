@@ -1,0 +1,70 @@
+/*
+AUTHOR :  Sakib Rahman
+PROBLEM:  UVA 11219
+ALGO:	Calculation
+JUDGE:	UVa
+*/
+
+#pragma warning (disable : 4786)
+#pragma comment(linker, "/STACK:16777216")
+#include <bits/stdc++.h>
+
+#define XX          first
+#define YY          second
+#define LL          long long
+#define PI          acos(-1.0)
+#define EPS         1e-9
+#define MOD         1000000007
+#define MP          make_pair
+#define PB          push_back
+#define SZ(x)       ((int)(x).size())
+#define SQ(x)       ((x)*(x))
+#define CLR(x,y)    memset(x,y,sizeof(x))
+#define MAX(a,b)    ((a)>(b)?(a):(b))
+#define MIN(a,b)    ((a)<(b)?(a):(b))
+#define ABS(x)      ((x)<0?-(x):(x))
+#define FABS(x)     ((x)+eps<0?-(x):(x))
+#define VSORT(v)    sort(v.begin(),v.end())
+#define UNIQUE(V)   (V).erase(unique((V).begin(),(V).end()),(V).end())
+#define DIGIT(x,y)  (((int)(log10((x))/log10((y))))+1)
+#define LCM(x,y)    (((x)/gcd((x),(y)))*(y))
+#define FOR(i,x,y)  for(int i = (x) ; i <= (y) ; ++i)
+#define ROF(i,x,y)  for(int i = (y) ; i >= (x) ; --i)
+#define READ(f)     freopen(f,"r",stdin)
+#define WRITE(f)    freopen(f,"w",stdout)
+
+using namespace std;
+
+int main(){
+    int T,q=0;
+    int year1,year2,day1,day2,month1,month2;
+    scanf("%d",&T);
+    while(T--){
+            q++;
+        int flag=0,age;
+        scanf("%d/%d/%d",&day1,&month1,&year1);
+        scanf("%d/%d/%d",&day2,&month2,&year2);
+        int total1=day1+month1*30+year1*365;
+        int total2=day2+month2*30+year2*365;
+
+        if(total1==total2)
+            age=0;
+        else if(total2>total1)
+            flag=1;
+        else{
+            age=(total1-total2)/365;
+            if(age>130)
+                flag=2;
+            else
+                flag=0;
+        }
+
+
+        if(flag==0)
+            printf("Case #%d: %d\n",q,age);
+        else if(flag==1)
+            printf("Case #%d: Invalid birth date\n",q);
+        else if(flag==2)
+            printf("Case #%d: Check birth date\n",q);
+    }
+}

@@ -1,0 +1,56 @@
+#include <iostream>
+#include <cstdio>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+    double u,v,a,s,t;
+    int q=0;
+    int N;
+
+    while(cin>>N){
+            q++;
+        if(N==0)
+            break;
+        if(N==1){
+            cin>>u>>v>>t;
+            a=(v-u)/t;
+            s=(v*v-u*u)/(2*a);
+            printf("Case %d: %.3lf %.3lf\n",q,s,a);
+
+        }
+        else if(N==2){
+            cin>>u>>v>>a;
+            s=(v*v-u*u)/(2*a);
+            t=(v-u)/a;
+            printf("Case %d: %.3lf %.3lf\n",q,s,t);
+
+        }
+        else if(N==3){
+            cin>>u>>a>>s;
+            v=u*u+2*a*s;
+            v=sqrt(v);
+            t=(v-u)/a;
+            printf("Case %d: %.3lf %.3lf\n",q,v,t);
+
+        }
+         else if(N==4){
+            cin>>v>>a>>s;
+            u=v*v-2*a*s;
+            u=sqrt(u);
+            t=(v-u)/a;
+            printf("Case %d: %.3lf %.3lf\n",q,u,t);
+
+        }
+
+
+    }
+
+    return 0;
+
+}
+
+
+

@@ -1,0 +1,18 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+#define PIE 2*acos(0.0)
+using namespace std;
+int main()
+{
+	double n,m,area,d;
+	while(cin>>n>>m)
+	{
+
+		d=sin(2*PIE/m);
+		d=m*n*n*d;
+		d=d/2;
+		printf("%.3lf\n",d);
+
+	}
+}

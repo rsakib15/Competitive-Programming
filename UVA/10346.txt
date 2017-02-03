@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+int main(){
+    int a,n,k;
+    while(scanf("%d%d",&n,&k)==2){
+            if(k<2)
+                break;
+            a=n;
+        while(n>=k){
+            a=a+n/k;
+            n=n/k+n%k;
+        }
+
+        printf("%d\n",a);
+    }
+}
