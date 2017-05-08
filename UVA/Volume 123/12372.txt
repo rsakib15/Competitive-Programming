@@ -1,0 +1,22 @@
+#include <iostream>
+#include<cstdio>
+using namespace std;
+
+int main()
+{
+    int a,b,c,d,cn=0;
+    scanf("%d",&d);
+    while(d--)
+    {
+       scanf("%d %d %d",&a,&b,&c);
+
+        if(a<=20 && b<=20 && c<=20)
+            printf("Case %d: good\n",++cn);
+        else
+            printf("Case %d: bad\n",++cn);
+
+    }
+
+
+    return 0;
+}

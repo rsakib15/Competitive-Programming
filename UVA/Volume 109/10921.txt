@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+using namespace std;
+
+int main(){
+    char C[35];
+    int i,j;
+
+    while(gets(C)){
+
+        i=strlen(C);
+
+        for(j=0;j<i;j++){
+            if(C[j]=='A' || C[j]=='B' || C[j]=='C')
+                printf("2");
+            else if (C[j]=='D' || C[j]=='E' || C[j]=='F')
+                 printf("3");
+            else if (C[j]=='G' || C[j]=='H' || C[j]=='I')
+                 printf("4");
+            else if (C[j]=='J' || C[j]=='K' || C[j]=='L')
+                 printf("5");
+            else if (C[j]=='M' || C[j]=='N' || C[j]=='O')
+                 printf("6");
+            else if (C[j]=='P' || C[j]=='Q' || C[j]=='R' || C[j]=='S')
+                 printf("7");
+            else if (C[j]=='T' || C[j]=='U' || C[j]=='V')
+                 printf("8");
+            else if (C[j]=='W' || C[j]=='X' || C[j]=='Y' || C[j]=='Z')
+                 printf("9");
+            else if (C[j]=='0' || C[j]=='1' || C[j]=='-')
+                 printf("%c",C[j]);
+
+        }
+        printf("\n");
+    }
+
+}

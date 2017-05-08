@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int findmax(int a,int b,int c);
+
+int main(){
+    int Term1,Term2,Final,Att,ClassTest1,ClassTest2,ClassTest3;
+    int Term,ClassTest,total;
+    int T,i,j=0;
+
+    cin>>T;
+
+    while(T--){
+        j++;
+        cin>>Term1>>Term2>>Final>>Att>>ClassTest1>>ClassTest2>>ClassTest3;
+        Term= findmax(ClassTest1,ClassTest2,ClassTest3);
+        total=Term1+Term2+Final+Att+Term;
+
+        if(total>=90)
+            cout<<"Case "<<j<<": A"<<endl;
+        else if(total>=80 && total<90)
+            cout<<"Case "<<j<<": B"<<endl;
+        else if(total>=70 && total<80)
+            cout<<"Case "<<j<<": C"<<endl;
+        else if(total>=60 && total<70)
+            cout<<"Case "<<j<<": D"<<endl;
+        else
+            cout<<"Case "<<j<<": F"<<endl;
+
+    }
+}
+
+
+int findmax(int a,int b,int c){
+
+    if (b>=a && c>=a)
+        return (b+c)/2;
+    else if(a>=b && c>=b)
+        return (c+a)/2;
+    else if(a>=c && b>=c)
+        return (a+b)/2;
+}

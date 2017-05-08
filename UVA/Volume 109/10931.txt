@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+long long decimal_binary(int n);
+int main(){
+
+    long long i,one;
+    while(cin>>i){
+        if(i==0)
+            break;
+        one=decimal_binary(i);
+        printf("%lld (mod 2).\n",one);
+    }
+
+}
+
+long long decimal_binary(long long n){
+    long long rem,i=1,binary=0,one=0;
+    while (n!=0)
+    {
+        rem=n%2;
+        if(rem==1)
+            one++;
+        n=n/2;
+        binary+=rem*i;
+        i=i*10;
+    }
+    printf("The parity of %lld is ",binary);
+    return one;
+}
+

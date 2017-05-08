@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cstdio>
+
+using namespace std;
+int main()
+{
+    long long s,d,T,a,b;
+    scanf("%d",&T);
+    while(T--){
+        scanf("%lld %lld",&s,&d);
+        if(d>s || (s-d)%2!=0)
+            printf("impossible\n");
+        else{
+            a=(s+d)/2;
+            b= (s-d)/2;
+            printf("%lld %lld\n",a,b);
+        }
+
+    }
+    return 0;
+
+}

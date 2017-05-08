@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cstdio>
+#include <cstdio>
+using namespace std;
+
+int main(){
+    char arr[10][1000];
+    char rank[15];
+    int T,i,j,k,l=0,max;
+    scanf("%d",&T);
+    while(T--){
+            l++;
+        for(i=0;i<10;i++)
+            scanf("%s%d",arr[i],&rank[i]);
+
+        max=rank[0];
+        for(i=1;i<10;i++){
+            if(rank[i]>max)
+                max=rank[i];
+        }
+        printf("Case #%d:\n",l);
+        for(i=0;i<10;i++){
+            if(max==rank[i])
+                printf("%s\n",arr[i]);
+        }
+    }
+    return 0;
+}

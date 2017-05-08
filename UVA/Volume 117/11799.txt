@@ -1,0 +1,33 @@
+
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main()
+{
+	long A[100];
+	int T,y,q=0;
+	int count;
+
+    cin>>T;
+    while(T--){
+        q++;
+     cin>>y;
+    for( int i = 0 ; i <y ; i++ )
+		cin>>A[i];
+
+	for( int m = 0 ; m < y - 1 ; m++ ){
+		for( int n = 0 ; n < y - 1 - m ; n++ ){
+			if( A[ n ] > A[ n + 1 ] ){
+				int temp = A[ n ];
+				A[ n ] = A[ n + 1 ];
+				A[ n + 1 ] = temp;
+			}
+		}
+	}
+	printf("Case %d: %d\n",q,A[y-1]);
+    }
+	return 0;
+}
+
+

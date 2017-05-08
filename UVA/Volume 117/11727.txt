@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cstdio>
+#include <cmath>
+
+using namespace std;
+
+
+
+int func(int a,int b,int c){
+	int mid;
+		if(a>b){
+			if(c>b){
+              if( c < a )
+				  mid = c;
+              else
+                  mid = a;
+              }
+			else
+                mid = b;
+ }
+ else{
+	 if(b>c){
+		 if ( a> c)
+			 mid = a;
+		 else
+			 mid = c;
+	 }
+	 else
+		 mid =b;
+}
+	return mid ;
+}
+
+
+int main(){
+	int T;
+	int a,b,c,count=0;
+	cin>>T;
+	while(T--){
+		cin>>a>>b>>c;
+		count++;
+		if(a>=1000 && b>=1000 && c>=1000 && a<=10000 && b<=10000&& c<=10000){
+			cout<<"Case "<<count<<": "<<func(a,b,c)<<endl;
+		}
+	}
+}

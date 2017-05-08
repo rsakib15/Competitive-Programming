@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main(){
+    int T,a,b;
+    while(scanf("%d",&T)==1 && T!=0){
+        scanf("%d %d",&a,&b);
+        while(T--){
+            int c,d;
+            scanf("%d %d",&c,&d);
+            if(c>a && d>b)
+                printf("NE\n");
+            else if(c==a || d==b)
+                printf("divisa\n");
+            else if(c<a && d>b)
+                printf("NO\n");
+            else if(c>a && d<b)
+                printf("SE\n");
+            else
+                printf("SO\n");
+
+    }
+}
+
+}
+

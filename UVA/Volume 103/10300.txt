@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main(){
+
+    long long total,a,b,c,t,l;
+    cin>>t;
+    while(t--){
+        cin>>l;
+        total=0;
+        while(l--){
+            cin>>a>>b>>c;
+            total+=(a*c);
+        }
+
+        printf("%lld\n",total);
+
+    }
+    return 0;
+}
