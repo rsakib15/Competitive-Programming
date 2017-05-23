@@ -94,11 +94,11 @@ inline int BigMod(int a, int p, int M) {
 
 
 int main() {
-    READ();
-    WRITE();
-    long long n,i,k;
+    //READ();
+    //WRITE();
+    unsigned long long n,i,k;
     while(cin>>n>>k){
-        double digit=0;
+        long double digit=0;
         FOR(i,n-k+1,n+1){
             digit+=log10((double)i);
         }
